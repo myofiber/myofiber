@@ -1,4 +1,6 @@
 export type ButtonSize =
-  | "small"
-  | "medium"
-  | "large";
+  | "xs"
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl";

@@ -20,11 +20,16 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -b && vite build",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint src --ext .ts,.tsx",
-    "clean": "rimraf dist"
-  },
+  "build": "tsc -b && vite build",
+  "typecheck": "tsc --noEmit",
+  "lint": "eslint src --ext .ts,.tsx",
+  "clean": "rimraf dist",
+
+  "test": "vitest run",
+  "test:watch": "vitest",
+  "test:ui": "vitest --ui",
+  "test:coverage": "vitest run --coverage"
+},
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -33,20 +38,24 @@
     "@eslint/js": "^10.0.1",
     "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.3",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "@vitest/ui": "^4.1.10",
     "clsx": "^2.1.1",
     "eslint": "^10.8.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
+    "jsdom": "^30.0.1",
     "rimraf": "^6.0.1",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.65.0",
-    "vite": "^8.2.0",
+    "vite": "^8.2.1",
     "vite-plugin-dts": "^5.0.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.10"
   }
 }

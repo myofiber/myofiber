@@ -1,4 +1,8 @@
 export type ButtonVariant =
   | "primary"
-  | "secondary"
-  | "danger";
+  | "success"
+  | "warning"
+  | "danger"
+  | "outline"
+  | "ghost"
+  | "link";

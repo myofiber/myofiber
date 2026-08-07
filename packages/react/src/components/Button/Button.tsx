@@ -23,12 +23,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     //Input Type: ref
     ref,
   ) => {
-    const classes = [styles.button, styles[variant], styles[size], className]
+    const classNames = [styles.button, styles[variant], styles[size], className]
       .filter(Boolean)
       .join(" ");
 
     return (
-      <button ref={ref} type={type} className={classes} {...rest}>
+      <button ref={ref} type={type} className={classNames} {...rest}>
         {children}
       </button>
     );

@@ -42,59 +42,49 @@
 =========================== */
 
 .primary {
-  background: var(--mf-button-primary-background);
+  background-color: var(--mf-button-primary-background);
   color: var(--mf-button-primary-foreground);
   border-color: var(--mf-button-primary-border);
 }
 
-.secondary {
-  background: var(--mf-button-secondary-background);
-  color: var(--mf-button-secondary-foreground);
-  border-color: var(--mf-button-secondary-border);
-}
-
+ 
 .success {
-  background: var(--mf-button-success-background);
+  background-color: var(--mf-button-success-background);
   color: var(--mf-button-success-foreground);
   border-color: var(--mf-button-success-border);
 }
 
 .warning {
-  background: var(--mf-button-warning-background);
+  background-color: var(--mf-button-warning-background);
   color: var(--mf-button-warning-foreground);
   border-color: var(--mf-button-warning-border);
 }
 
 .danger {
-  background: var(--mf-button-danger-background);
+  background-color: var(--mf-button-danger-background);
   color: var(--mf-button-danger-foreground);
   border-color: var(--mf-button-danger-border);
 }
 
-.info {
-  background: var(--mf-button-info-background);
-  color: var(--mf-button-info-foreground);
-  border-color: var(--mf-button-info-border);
-}
-
+ 
 .outline {
-  background: var(--mf-button-outline-background);
+  background-color: var(--mf-button-outline-background);
   color: var(--mf-button-outline-foreground);
   border-color: var(--mf-button-outline-border);
 }
 
 .ghost {
-  background: var(--mf-button-ghost-background);
+  background-color: var(--mf-button-ghost-background);
   color: var(--mf-button-ghost-foreground);
   border-color: var(--mf-button-ghost-border);
 }
 
 .link {
-  background: var(--mf-button-link-background);
+  background-color: var(--mf-button-link-background);
   color: var(--mf-button-link-foreground);
   border-color: var(--mf-button-link-border);
 
-  border-width: 0;
+  border: none;
 }
 
 /* ===========================
