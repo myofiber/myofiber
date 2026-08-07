@@ -1,0 +1,33 @@
+{
+  "height": {
+    "xs": "24px",
+    "sm": "32px",
+    "md": "40px",
+    "lg": "48px",
+    "xl": "56px"
+  },
+
+  "icon": {
+    "xs": "12px",
+    "sm": "16px",
+    "md": "20px",
+    "lg": "24px",
+    "xl": "32px"
+  },
+
+  "avatar": {
+    "xs": "24px",
+    "sm": "32px",
+    "md": "40px",
+    "lg": "48px",
+    "xl": "64px"
+  },
+
+  "container": {
+    "xs": "320px",
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px"
+  }
+}

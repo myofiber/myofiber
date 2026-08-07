@@ -1,0 +1,152 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--mf-spacing-2);
+
+  border-style: solid;
+  border-width: 1px;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+
+  font-family: var(--mf-typography-font-family-base);
+  font-weight: var(--mf-typography-font-weight-medium);
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ===========================
+   Accessibility
+=========================== */
+
+.button:focus-visible {
+  outline: 2px solid var(--mf-color-primary-500);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===========================
+   Variants
+=========================== */
+
+.primary {
+  background: var(--mf-button-primary-background);
+  color: var(--mf-button-primary-foreground);
+  border-color: var(--mf-button-primary-border);
+}
+
+.secondary {
+  background: var(--mf-button-secondary-background);
+  color: var(--mf-button-secondary-foreground);
+  border-color: var(--mf-button-secondary-border);
+}
+
+.success {
+  background: var(--mf-button-success-background);
+  color: var(--mf-button-success-foreground);
+  border-color: var(--mf-button-success-border);
+}
+
+.warning {
+  background: var(--mf-button-warning-background);
+  color: var(--mf-button-warning-foreground);
+  border-color: var(--mf-button-warning-border);
+}
+
+.danger {
+  background: var(--mf-button-danger-background);
+  color: var(--mf-button-danger-foreground);
+  border-color: var(--mf-button-danger-border);
+}
+
+.info {
+  background: var(--mf-button-info-background);
+  color: var(--mf-button-info-foreground);
+  border-color: var(--mf-button-info-border);
+}
+
+.outline {
+  background: var(--mf-button-outline-background);
+  color: var(--mf-button-outline-foreground);
+  border-color: var(--mf-button-outline-border);
+}
+
+.ghost {
+  background: var(--mf-button-ghost-background);
+  color: var(--mf-button-ghost-foreground);
+  border-color: var(--mf-button-ghost-border);
+}
+
+.link {
+  background: var(--mf-button-link-background);
+  color: var(--mf-button-link-foreground);
+  border-color: var(--mf-button-link-border);
+
+  border-width: 0;
+}
+
+/* ===========================
+   Sizes
+=========================== */
+
+.xs {
+  height: var(--mf-button-xs-height);
+  padding-inline: var(--mf-button-xs-padding-x);
+  padding-block: var(--mf-button-xs-padding-y);
+
+  font-size: var(--mf-button-xs-font-size);
+
+  border-radius: var(--mf-button-xs-border-radius);
+}
+
+.sm {
+  height: var(--mf-button-sm-height);
+  padding-inline: var(--mf-button-sm-padding-x);
+  padding-block: var(--mf-button-sm-padding-y);
+
+  font-size: var(--mf-button-sm-font-size);
+
+  border-radius: var(--mf-button-sm-border-radius);
+}
+
+.md {
+  height: var(--mf-button-md-height);
+  padding-inline: var(--mf-button-md-padding-x);
+  padding-block: var(--mf-button-md-padding-y);
+
+  font-size: var(--mf-button-md-font-size);
+
+  border-radius: var(--mf-button-md-border-radius);
+}
+
+.lg {
+  height: var(--mf-button-lg-height);
+  padding-inline: var(--mf-button-lg-padding-x);
+  padding-block: var(--mf-button-lg-padding-y);
+
+  font-size: var(--mf-button-lg-font-size);
+
+  border-radius: var(--mf-button-lg-border-radius);
+}
+
+.xl {
+  height: var(--mf-button-xl-height);
+  padding-inline: var(--mf-button-xl-padding-x);
+  padding-block: var(--mf-button-xl-padding-y);
+
+  font-size: var(--mf-button-xl-font-size);
+
+  border-radius: var(--mf-button-xl-border-radius);
+}

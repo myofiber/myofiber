@@ -1,0 +1,8 @@
+{
+  "name": "myofiber",
+  "private": true,
+
+  "scripts": {
+    "generate:tokens": "pnpm --filter @myofiber/tokens generate:tokens"
+  }
+}

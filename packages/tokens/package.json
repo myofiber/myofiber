@@ -1,0 +1,12 @@
+{
+  "name": "@myofiber/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:tokens": "tsx scripts/generate-css-vars.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3"
+  }
+}

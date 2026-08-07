@@ -1,0 +1,109 @@
+{
+  "default": {
+    "variant": "primary",
+    "size": "md"
+  },
+
+  "sizes": {
+    "xs": {
+      "height": "{sizes.height.xs}",
+      "paddingX": "{spacing.2}",
+      "paddingY": "{spacing.1}",
+      "fontSize": "{typography.fontSize.xs}",
+      "iconSize": "{sizes.icon.xs}",
+      "borderRadius": "{radius.sm}"
+    },
+
+    "sm": {
+      "height": "{sizes.height.sm}",
+      "paddingX": "{spacing.3}",
+      "paddingY": "{spacing.2}",
+      "fontSize": "{typography.fontSize.sm}",
+      "iconSize": "{sizes.icon.sm}",
+      "borderRadius": "{radius.md}"
+    },
+
+    "md": {
+      "height": "{sizes.height.md}",
+      "paddingX": "{spacing.4}",
+      "paddingY": "{spacing.2}",
+      "fontSize": "{typography.fontSize.md}",
+      "iconSize": "{sizes.icon.md}",
+      "borderRadius": "{radius.md}"
+    },
+
+    "lg": {
+      "height": "{sizes.height.lg}",
+      "paddingX": "{spacing.5}",
+      "paddingY": "{spacing.3}",
+      "fontSize": "{typography.fontSize.lg}",
+      "iconSize": "{sizes.icon.lg}",
+      "borderRadius": "{radius.lg}"
+    },
+
+    "xl": {
+      "height": "{sizes.height.xl}",
+      "paddingX": "{spacing.6}",
+      "paddingY": "{spacing.3}",
+      "fontSize": "{typography.fontSize.xl}",
+      "iconSize": "{sizes.icon.xl}",
+      "borderRadius": "{radius.xl}"
+    }
+  },
+
+  "variants": {
+    "primary": {
+      "background": "{colors.primary.600}",
+      "foreground": "{colors.white}",
+      "border": "{colors.primary.600}"
+    },
+
+    "secondary": {
+      "background": "{colors.secondary.600}",
+      "foreground": "{colors.white}",
+      "border": "{colors.secondary.600}"
+    },
+
+    "success": {
+      "background": "{colors.success.600}",
+      "foreground": "{colors.white}",
+      "border": "{colors.success.600}"
+    },
+
+    "warning": {
+      "background": "{colors.warning.500}",
+      "foreground": "{colors.black}",
+      "border": "{colors.warning.500}"
+    },
+
+    "danger": {
+      "background": "{colors.danger.600}",
+      "foreground": "{colors.white}",
+      "border": "{colors.danger.600}"
+    },
+
+    "info": {
+      "background": "{colors.info.600}",
+      "foreground": "{colors.white}",
+      "border": "{colors.info.600}"
+    },
+
+    "outline": {
+      "background": "{colors.transparent}",
+      "foreground": "{colors.primary.600}",
+      "border": "{colors.primary.600}"
+    },
+
+    "ghost": {
+      "background": "{colors.transparent}",
+      "foreground": "{colors.primary.600}",
+      "border": "{colors.transparent}"
+    },
+
+    "link": {
+      "background": "{colors.transparent}",
+      "foreground": "{colors.primary.600}",
+      "border": "{colors.transparent}"
+    }
+  }
+}

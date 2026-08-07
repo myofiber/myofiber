@@ -11,6 +11,7 @@ import {
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
+    // Input type: Props
     {
       children,
       variant = DEFAULT_BUTTON_VARIANT,
@@ -19,6 +20,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       type = "button",
       ...rest
     },
+    //Input Type: ref
     ref,
   ) => {
     const classes = [styles.button, styles[variant], styles[size], className]
