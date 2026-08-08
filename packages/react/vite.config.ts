@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
@@ -17,18 +17,14 @@ export default defineConfig({
   ],
 
   test: {
-    globals: true,
-
     environment: "jsdom",
-
-    setupFiles: "./vitest.setup.ts",
-
     css: true,
+     setupFiles: "./vitest.setup.ts",
   },
 
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: resolve(import.meta.dirname, "src/index.ts"),
       name: "MyoFiber",
       formats: ["es", "cjs"],
       fileName: (format) =>
