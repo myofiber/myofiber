@@ -1,0 +1,80 @@
+name: Release React Package
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.13.1
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Read package version
+        id: version
+        shell: bash
+        run: |
+          VERSION=$(node -p "require('./packages/react/package.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Release version: $VERSION"
+
+      - name: Check Git tag does not exist
+        shell: bash
+        run: |
+          TAG="v${{ steps.version.outputs.version }}"
+
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "❌ Git tag $TAG already exists."
+            exit 1
+          fi
+
+          echo "✅ Git tag $TAG does not exist."
+
+      - name: Run tests
+        run: pnpm --filter @myofiber/react test
+
+      - name: Build
+        run: pnpm --filter @myofiber/react build
+
+      - name: Verify package
+        run: pnpm --filter @myofiber/react pack --dry-run
+
+      - name: Publish to npm
+        run: pnpm --filter @myofiber/react publish --access public --tag dev
+
+      - name: Create Git tag
+        shell: bash
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          TAG="v$VERSION"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git tag "$TAG"
+          git push origin "$TAG"
+
+          echo "✅ Created and pushed $TAG"
